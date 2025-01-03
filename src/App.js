@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with the first message/feature
+          Learn React with the first message/feature another feature
         </a>
       </header>
     </div>
