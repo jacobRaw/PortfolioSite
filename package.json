@@ -1,13 +1,21 @@
 {
   "name": "portfolio_site",
+  "homepage": "https://jacobraw.github.io/PortfolioSite/#",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.3.1",
+    "@mui/material": "^6.3.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap-icons": "^1.11.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.1",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -37,7 +45,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://jacobraw.github.io/PortfolioSite/",
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
