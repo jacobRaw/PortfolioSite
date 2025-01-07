@@ -34,9 +34,9 @@ export default function Navbar () {
 
   return (
     <React.Fragment>
-        <AppBar position="fixed" sx={{backgroundImage: 'linear-gradient(to left, grey 25%, white)'}}>
-        <Container sx={{margin:'0 5%', width:'100%', paddingLeft: '0px', paddingRight: '0px'}}>
-            <Toolbar disableGutters sx={{margin: '0 5%', padding: '0px'}}>
+        <AppBar position="sticky" sx={{backgroundImage: 'linear-gradient(to left, grey 25%, white)'}}>
+        <Container>
+            <Toolbar disableGutters>
             <Typography
                 variant="h6"
                 noWrap
@@ -108,7 +108,7 @@ export default function Navbar () {
             >
                 JACOB RAWUNG
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', gap: '20px' }}>
                 {pages.map((page) => {
                     let link = `/${page}`;
                     if (page === 'home') {
@@ -157,7 +157,6 @@ export default function Navbar () {
             </Toolbar>
         </Container>
         </AppBar>
-        <Toolbar />
     </React.Fragment>
   );
 }
