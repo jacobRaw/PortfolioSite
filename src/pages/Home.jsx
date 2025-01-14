@@ -7,6 +7,7 @@ import { grey } from "@mui/material/colors";
 import unswIcon from '../unsw.svg';
 import macUniIcon from '../macquarieUniIcon.svg';
 import ewbIcon from '../ewb_australia.png';
+import Footer from '../components/Footer.jsx';
 
 const textColor = grey[900];
 
@@ -132,6 +133,7 @@ export default function Home () {
             <div>UNSW - WAM, date</div>
             <div>Macquarie</div>
         </Container>
+        <Footer/>
         </>
     );
 }
