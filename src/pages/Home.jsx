@@ -5,7 +5,8 @@ import React from 'react';
 import Container from '@mui/material/Container';
 import { grey } from "@mui/material/colors";
 import unswIcon from '../unsw.svg';
-import macUniIcon from '../macquarieUniIcon.png';
+import macUniIcon from '../macquarieUniIcon.svg';
+import ewbIcon from '../ewb_australia.png';
 
 const textColor = grey[900];
 
@@ -43,9 +44,7 @@ const BlurredEdge = styled('div')({
 const WelcomeMessage = styled('div')({
     textAlign: 'right',
     zIndex: '10',
-    flex: '7',
-    fontSize: '3rem',
-    fontWeight: 'bold',
+    flex: '2',
     color: `${textColor}`,
     display:'flex',
     flexDirection: 'column',
@@ -53,20 +52,37 @@ const WelcomeMessage = styled('div')({
 
 const TitleMessage = styled('div')({
     fontFamily: 'Times New Roman',
+    fontSize: '3vw',
+    fontWeight: 'bold',
 })
 
 const MissionStatement = styled('div')({
     fontWeight: 'normal',
-    fontSize: '1.5rem',
-
+    fontSize: '1.75vw',
 })
 
 const WelcomeMessageContainer = styled(Container) ({
     display: 'flex',
+    flexDirection:'row',
+    gap: '20px',
+    height: '100%',
 })
 
 const PictureFiller = styled('div') ({
-    flex: '4',
+    flex: '2',
+    width: '100%',
+})
+
+const IconContainer = styled('div')({
+    display: 'flex',
+    justifyContent: 'flex-end',
+    marginTop: '3vw',
+    gap: '2vw',
+})
+
+const IconDiv = styled('div')({
+    width: '70%',
+    height: '70%',
 })
 
 
@@ -81,7 +97,7 @@ export default function Home () {
                 <PictureFiller/>
                 <WelcomeMessage>
                     <TitleMessage>
-                        <ul style={{listStyleType: 'none', lineHeight: '75px'}}>
+                        <ul style={{listStyleType: 'none', lineHeight: '4vw'}}>
                             <li>Mechatronics Engineer</li> 
                             <li>Computer Scientist</li> 
                             <li>Undergraduate</li> 
@@ -90,13 +106,32 @@ export default function Home () {
                     <MissionStatement>
                         <b>Jacob Rawung</b> has experience with over <b>5 different</b> programming languages and built this website in React.  
                     </MissionStatement>
+                    <IconContainer>
+                        <IconDiv>
+                            <img src={unswIcon} alt="UNSW logo" style={{objectFit: 'contain', width: '100%', height: '100%'}}/> 
+                        </IconDiv>
+                        <IconDiv>
+                            <img src={macUniIcon} alt="Macquarie University logo" style={{objectFit: 'contain', width: '100%', height: '100%'}}/>
+                        </IconDiv>
+                        <IconDiv>  
+                            <img src={ewbIcon} alt="EWB logo" style={{objectFit: 'contain', width: '100%', height: '100%'}}/>
+                        </IconDiv>
+                    </IconContainer>
                 </WelcomeMessage>
-                <img src={unswIcon} alt="UNSW logo" style={{height: '500', width:'500px'}}/> 
-                {/* <img src={macUniIcon} alt="Macquarie University logo"/> */}
             </WelcomeMessageContainer>
             </ProfileOverlay>
             <ProfilePicture src={profilePicture} alt="Profile picture"/>
         </ProfileContainer>
+        <Container>
+            <h1>Recent Experience and Projects</h1>
+            <div>Sunswift - date, picture, description</div>
+            <div>Van build</div>
+            <div>4WD pantry</div>
+            <div>EWB digital design summit</div>
+            <h1>Education</h1>
+            <div>UNSW - WAM, date</div>
+            <div>Macquarie</div>
+        </Container>
         </>
     );
 }
