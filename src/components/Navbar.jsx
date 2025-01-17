@@ -17,10 +17,20 @@ import { Link } from 'react-router-dom';
 import { grey } from "@mui/material/colors";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import PropTypes from 'prop-types';
-
-const pages = ['home', 'projects', 'about'];
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const textColor = grey[900];
+const textHover = grey[300];
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: `${textColor}`,
+    },
+  },
+});
+
+const pages = ['home', 'projects', 'about'];
 
 function ElevationScroll(props) {
     const { children, window } = props;
@@ -62,6 +72,7 @@ export default function Navbar () {
 
   return (
     <React.Fragment>
+        <ThemeProvider theme={theme}>
         <ElevationScroll>
             <AppBar position="sticky" sx={{backgroundImage: 'linear-gradient(to left, grey 25%, white)'}}>
             <Container>
@@ -148,12 +159,18 @@ export default function Navbar () {
                                 <Button
                                     key={page}
                                     onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, display: 'block'}}
+                                    color='primary'
+                                    sx={{ my: 2, 
+                                        display: 'block',
+                                        fontSize: '1.25vw',
+                                        '&:hover': {
+                                            backgroundColor:'transparent', 
+                                            color:`${textHover}`,
+                                            transform: 'scale(1.1)'
+                                        },
+                                    }}
                                 >
-                                    <Typography color={textColor}>
-                                    {page}
-                                    </Typography>
-                                    
+                                    {page}  
                                 </Button>
                             </Link>
                         );
@@ -161,18 +178,18 @@ export default function Navbar () {
                 </Box>
                 <Box sx={{ flexGrow: 0 }}>
                     <Tooltip title="Contact Info">
-                        <IconButton>
-                            <MailOutlineIcon sx={{color: textColor}}/>
-                            <PhoneIphoneIcon sx={{color: textColor}}/>
+                        <IconButton sx={{color: textColor, '&:hover': {color:`${textHover}`, transition: 'transform 0.15s', transform: 'scale(1.1)', backgroundColor: 'transparent'}}}>
+                            <MailOutlineIcon/>
+                            <PhoneIphoneIcon/>
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="Github Profile">
-                        <IconButton>
-                            <GitHubIcon sx={{color: textColor}}/>
+                        <IconButton sx={{color: textColor, '&:hover': {color:`${textHover}`,transition: 'transform 0.15s', transform: 'scale(1.1)',  backgroundColor: 'transparent'}}}>
+                            <GitHubIcon/>
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="LinkedIn Profile">
-                        <IconButton sx={{color: textColor}}>
+                        <IconButton sx={{color: textColor, '&:hover': {color:`${textHover}`, transition: 'transform 0.15s', transform: 'scale(1.1)', backgroundColor: 'transparent'}}}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
                                     <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
                             </svg>
@@ -183,6 +200,7 @@ export default function Navbar () {
             </Container>
             </AppBar>
         </ElevationScroll>
+        </ThemeProvider>
     </React.Fragment>
   );
 }

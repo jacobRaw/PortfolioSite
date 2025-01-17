@@ -8,8 +8,11 @@ import unswIcon from '../unsw.svg';
 import macUniIcon from '../macquarieUniIcon.svg';
 import ewbIcon from '../ewb_australia.png';
 import Footer from '../components/Footer.jsx';
+import ProjectCard from '../components/ProjectCard.jsx';
+import SR7 from '../SR7.png';
 
 const textColor = grey[900];
+const eduColor = grey[100];
 
 const ProfilePicture = styled('img')({
     height: "100%",
@@ -123,16 +126,55 @@ export default function Home () {
             </ProfileOverlay>
             <ProfilePicture src={profilePicture} alt="Profile picture"/>
         </ProfileContainer>
+        <div style={{backgroundColor: eduColor, paddingTop: '2vw', paddingBottom: '2vw'}}>
         <Container>
-            <h1>Recent Experience and Projects</h1>
-            <div>Sunswift - date, picture, description</div>
-            <div>Van build</div>
-            <div>4WD pantry</div>
-            <div>EWB digital design summit</div>
-            <h1>Education</h1>
-            <div>UNSW - WAM, date</div>
-            <div>Macquarie</div>
+            <h1 style={{textAlign: 'center', marginBottom: '0.7vw', marginTop: '0'}}>Recent Experience and Projects</h1>
+            <div style={{textAlign: 'center'}}>My most recent professional achievements or you can access all of my projects here.</div>
+            <div style={{marginTop: '3vw', display:'flex', justifyContent:'space-between', flexWrap: 'wrap', gap:'1vw'}}>
+                <ProjectCard 
+                    project={{
+                        name: 'Van Bed Frame', 
+                        img: 'van picture', 
+                        role:'Personal Project', 
+                        description: 'hello',
+                        time: 'Dec 2024',
+                }}/>
+                <ProjectCard 
+                    project={{
+                        name: 'Sunswift', 
+                        img: `${SR7}`, 
+                        role:'Embedded Systems Software Engineer', 
+                        description: 'hello',
+                        time: 'Sep 2023 - Dec 2024',
+                }}/>
+                <ProjectCard 
+                    project={{
+                        name: '4WD Pantry', 
+                        img: `${SR7}`, 
+                        role:'Personal Project', 
+                        description: 'hello',
+                        time: 'Jan 2023 - Dec 2023',
+                }}/>
+                <ProjectCard 
+                    project={{
+                        name: 'EWB Digital Design Summit', 
+                        img: 'EWB logo', 
+                        role:'Humanitarian Engineering Consultant', 
+                        description: 'hello',
+                        time: 'Jan 2022 - Feb 2022',
+                }}/>
+                
+            </div>
+            <div style={{textDecoration: 'underline', textAlign: 'center', marginTop:'2vw'}}>View all projects</div>
         </Container>
+        </div>
+        <div style={{backgroundColor: 'white'}}>
+            <Container>
+                <h1>Education</h1>
+                <div>UNSW - WAM, date</div>
+                <div>Macquarie</div>
+            </Container>
+        </div>
         <Footer/>
         </>
     );

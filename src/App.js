@@ -5,7 +5,6 @@ import NotFoundPage from './pages/NotFoundPage.jsx';
 import About from './pages/About.jsx';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
-
 function App() {
   return (
     <>
