@@ -1,15 +1,23 @@
 import Navbar from '../components/Navbar';
 import { styled } from '@mui/system';
-import profilePicture from '../headshot.png';
+import profilePicture from '../resources/headshot.png';
 import React from 'react';
 import Container from '@mui/material/Container';
 import { grey } from "@mui/material/colors";
-import unswIcon from '../unsw.svg';
-import macUniIcon from '../macquarieUniIcon.svg';
-import ewbIcon from '../ewb_australia.png';
+import unswIcon from '../resources/unsw.svg';
+import macUniIcon from '../resources/macquarieUniIcon.svg';
+import ewbIcon from '../resources/ewb_australia.png';
 import Footer from '../components/Footer.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
-import SR7 from '../SR7.png';
+import SR7 from '../resources/SR7.png';
+import Divider from '@mui/material/Divider';
+import jsLogo from '../resources/JavaScript-logo.png';
+import tsLogo from '../resources/Typescript_logo.png';
+import reactLogo from '../resources/reactjs-logo.png';
+import muiLogo from '../resources/material-ui-1.svg';
+import htmlLogo from '../resources/html-logo.png';
+import cssLogo from '../resources/CSS-Logo-2011.png';
+
 
 const textColor = grey[900];
 const eduColor = grey[100];
@@ -89,8 +97,8 @@ const IconDiv = styled('div')({
     height: '70%',
 })
 
-
 export default function Home () {
+
     return (
         <>
         <Navbar/>
@@ -171,8 +179,72 @@ export default function Home () {
         <div style={{backgroundColor: 'white'}}>
             <Container>
                 <h1>Education</h1>
-                <div>UNSW - WAM, date</div>
-                <div>Macquarie</div>
+                <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex'}}>
+                        <img src={unswIcon} style={{width: '15%', height: '15%'}}/>
+                            <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
+                                <li>
+                                    <b>Bachelor of Engineering (Mechatronics) and Computer Science</b>
+                                </li>
+                                <li>
+                                    University of New South Wales Sydney, Kensington Campus
+                                </li>
+                                <li>
+                                    February 2022 - December 2026
+                                </li>
+                                <li>
+                                    WAM: 79.934
+                                </li>
+                            </ul>
+                    </div>
+                    <div style={{display: 'flex'}}>
+                        <img src={macUniIcon} style={{width: '15%', height: '20%'}}/>
+                            <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
+                                <li>
+                                    <b>Bachelor of Engineering (Mechatronics) and Astrophysics</b>
+                                </li>
+                                <li>
+                                    Macquarie University Sydney, Wallumattagal Campus
+                                </li>
+                                <li>
+                                    February 2020 - December 2021
+                                </li>
+                                <li>
+                                    WAM: 86.267
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </Container>
+            <Container>
+                <Divider/>
+                <h1>Skills</h1>
+                <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex'}}>
+                        <div style={{display:'flex', gap:'1vw', width:'35%'}}>
+                            <img src={jsLogo} style={{width: '20%', objectFit: 'contain'}}/>
+                            <img src={tsLogo} style={{width: '20%', objectFit: 'contain'}}/>
+                            <img src={reactLogo} style={{width: '35%', objectFit: 'contain'}}/>
+                            <img src={muiLogo} style={{width: '30%', objectFit: 'contain'}}/>
+                            <img src={htmlLogo} style={{width:'30%', objectFit: 'contain'}}/>
+                            <img src={cssLogo} style={{width: '55%', objectFit: 'contain'}}/>
+                        </div>
+                        <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
+                            <li>
+                                <b>Web Development</b>
+                            </li>
+                            <li>
+                                University of New South Wales Sydney, Kensington Campus
+                            </li>
+                            <li>
+                                February 2022 - December 2026
+                            </li>
+                            <li>
+                                WAM: 79.934
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </Container>
         </div>
         <Footer/>
