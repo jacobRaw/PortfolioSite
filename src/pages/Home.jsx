@@ -17,7 +17,26 @@ import reactLogo from '../resources/reactjs-logo.png';
 import muiLogo from '../resources/material-ui-1.svg';
 import htmlLogo from '../resources/html-logo.png';
 import cssLogo from '../resources/CSS-Logo-2011.png';
-
+import githubLogo from '../resources/GitHub-logo.png';
+import gitlabLogo from '../resources/gitlab-logo.jpg';
+import vscodeLogo from '../resources/vscode-logo.png';
+import visualStudioLogo from '../resources/visualStudio-logo.png';
+import wslLogo from '../resources/wsl-logo.webp';
+import dockerLogo from '../resources/docker-logo.png';
+import creoLogo from '../resources/creo-logo.webp';
+import solidworksLogo from '../resources/solidworksLogo.png';
+import fusion360Logo from '../resources/fusion360-logo.png';
+import altiumLogo from '../resources/Altium_Designer_Logo.png';
+import verilogLogo from '../resources/verilog-logo.svg';
+import matlabLogo from '../resources/matlab_logo.png';
+import webotsLogo from '../resources/webots_logo.png';
+import URlogo from '../resources/UR_logo.png';
+import cppLogo from '../resources/c++logo.png';
+import arduinoLogo from '../resources/arduino-logo.png';
+import javaLogo from '../resources/java-logo.png';
+import cLogo from '../resources/c-logo.png';
+import pythonLogo from '../resources/python-logo.jpg';
+import latexLogo from '../resources/latex-logo.png';
 
 const textColor = grey[900];
 const eduColor = grey[100];
@@ -181,7 +200,7 @@ export default function Home () {
                 <h1>Education</h1>
                 <div style={{display: 'flex', flexDirection: 'column'}}>
                     <div style={{display: 'flex'}}>
-                        <img src={unswIcon} style={{width: '15%', height: '15%'}}/>
+                        <img src={unswIcon} alt={'unsw logo'} style={{width: '15%', height: '15%'}}/>
                             <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
                                 <li>
                                     <b>Bachelor of Engineering (Mechatronics) and Computer Science</b>
@@ -198,7 +217,7 @@ export default function Home () {
                             </ul>
                     </div>
                     <div style={{display: 'flex'}}>
-                        <img src={macUniIcon} style={{width: '15%', height: '20%'}}/>
+                        <img src={macUniIcon} alt={'macquarie uni logo'} style={{width: '15%', height: '20%'}}/>
                             <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
                                 <li>
                                     <b>Bachelor of Engineering (Mechatronics) and Astrophysics</b>
@@ -219,31 +238,133 @@ export default function Home () {
             <Container>
                 <Divider/>
                 <h1>Skills</h1>
-                <div style={{display: 'flex', flexDirection: 'column'}}>
+                <div style={{display: 'flex', flexDirection: 'column', gap:'2vw'}}>
                     <div style={{display: 'flex'}}>
-                        <div style={{display:'flex', gap:'1vw', width:'35%'}}>
-                            <img src={jsLogo} style={{width: '20%', objectFit: 'contain'}}/>
-                            <img src={tsLogo} style={{width: '20%', objectFit: 'contain'}}/>
-                            <img src={reactLogo} style={{width: '35%', objectFit: 'contain'}}/>
-                            <img src={muiLogo} style={{width: '30%', objectFit: 'contain'}}/>
-                            <img src={htmlLogo} style={{width:'30%', objectFit: 'contain'}}/>
-                            <img src={cssLogo} style={{width: '55%', objectFit: 'contain'}}/>
+                        <div style={{display:'flex', justifyContent: 'space-around', width:'30%', flexWrap: 'wrap', border: 'solid black 1px'}}>
+                            <img src={jsLogo} alt='javascript logo' style={{width: '20%', objectFit: 'contain'}}/>
+                            <img src={tsLogo} alt='typescript logo' style={{width: '20%', objectFit: 'contain'}}/>
+                            <img src={reactLogo} alt='reactJS logo' style={{width: '35%', objectFit: 'contain'}}/>
+                            <img src={muiLogo} alt='material UI logo' style={{width: '27.5%', objectFit: 'contain'}}/>
+                            <img src={htmlLogo} alt='html logo' style={{width:'30%', objectFit: 'contain'}}/>
+                            <img src={cssLogo} alt='css logo' style={{width: '60%', objectFit: 'contain'}}/>
                         </div>
                         <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
                             <li>
                                 <b>Web Development</b>
                             </li>
                             <li>
-                                University of New South Wales Sydney, Kensington Campus
+                                <u>Backend:</u> hello
                             </li>
                             <li>
-                                February 2022 - December 2026
-                            </li>
-                            <li>
-                                WAM: 79.934
+                                <u>Frontend:</u> hello
                             </li>
                         </ul>
                     </div>
+                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex'}}>
+                        <div style={{display:'flex', justifyContent: 'space-around', width:'30%', flexWrap: 'wrap', border: 'solid black 1px'}}>
+                            <img src={githubLogo} alt='github logo' style={{width: '40%', objectFit: 'contain'}}/>
+                            <img src={gitlabLogo} alt='gitlab logo' style={{width: '60%', objectFit: 'contain'}}/>
+                            <img src={visualStudioLogo} alt='visual studio logo' style={{width: '50%', objectFit: 'contain'}}/>
+                            <img src={vscodeLogo} alt='vscode logo' style={{width: '50%', objectFit: 'contain'}}/>
+                            <img src={wslLogo} alt='WSL logo' style={{width:'50%', objectFit: 'contain'}}/>
+                            <img src={dockerLogo} alt='docker logo' style={{width: '40%', objectFit: 'contain'}}/>
+                        </div>
+                        <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
+                            <li>
+                                <b>Dev Tools</b>
+                            </li>
+                            <li>
+                                <u>Backend:</u> hello
+                            </li>
+                            <li>
+                                <u>Frontend:</u> hello
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex'}}>
+                        <div style={{display:'flex', justifyContent: 'space-around', width:'30%', flexWrap: 'wrap', border: 'solid black 1px'}}>
+                            <img src={creoLogo} alt='creo logo' style={{width: '30%', objectFit: 'contain'}}/>
+                            <img src={solidworksLogo} alt='solidworks logo' style={{width: '50%', objectFit: 'contain'}}/>
+                            <img src={fusion360Logo} alt='fusion 360 logo' style={{width: '70%', objectFit: 'contain'}}/>
+                        </div>
+                        <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
+                            <li>
+                                <b>CAD</b>
+                            </li>
+                            <li>
+                                <u>Backend:</u> hello
+                            </li>
+                            <li>
+                                <u>Frontend:</u> hello
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex'}}>
+                        <div style={{display:'flex', justifyContent: 'space-around', width:'30%', flexWrap: 'wrap', border: 'solid black 1px'}}>
+                            <img src={altiumLogo} alt='altium logo' style={{width: '50%', objectFit: 'contain'}}/>
+                            <img src={verilogLogo} alt='verilog logo' style={{width: '50%', objectFit: 'contain'}}/>
+                        </div>
+                        <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
+                            <li>
+                                <b>Electrical</b>
+                            </li>
+                            <li>
+                                <u>Backend:</u> hello
+                            </li>
+                            <li>
+                                <u>Frontend:</u> hello
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex'}}>
+                        <div style={{display:'flex', justifyContent: 'space-around', width:'30%', flexWrap: 'wrap', borderRadius: '5px', boxShadow: '0px 3px 10px 1px grey', padding: '0.5vw'}}>
+                            <img src={matlabLogo} alt='matlab logo' style={{width: '50%', objectFit: 'contain'}}/>
+                            <img src={cppLogo} alt='C++ logo' style={{width: '20%', objectFit: 'contain'}}/>
+                            <img src={URlogo} alt='Universal Robots logo' style={{width: '40%', objectFit: 'contain'}}/>
+                            <img src={webotsLogo} alt='webots logo' style={{width: '35%', objectFit: 'contain'}}/>
+                        </div>
+                        <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
+                            <li>
+                                <b>Control Systems/Robotics</b>
+                            </li>
+                            <li>
+                                <u>Backend:</u> hello
+                            </li>
+                            <li>
+                                <u>Frontend:</u> hello
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex'}}>
+                        <div style={{display:'flex', justifyContent: 'space-around', width:'30%', flexWrap: 'wrap', border: 'solid black 1px'}}>
+                            <img src={arduinoLogo} alt='arduino logo' style={{width: '30%', objectFit: 'contain'}}/>
+                            <img src={javaLogo} alt='java logo' style={{width: '20%', objectFit: 'contain'}}/>
+                            <img src={cLogo} alt='c logo' style={{width: '25%', objectFit: 'contain'}}/>
+                            <img src={pythonLogo} alt='python logo' style={{width: '27.5%', objectFit: 'contain'}}/>
+                            <img src={latexLogo} alt='latex logo' style={{width:'30%', objectFit: 'contain'}}/>
+                        </div>
+                        <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
+                            <li>
+                                <b>Other</b>
+                            </li>
+                            <li>
+                                <u>Backend:</u> hello
+                            </li>
+                            <li>
+                                <u>Frontend:</u> hello
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 </div>
             </Container>
         </div>
