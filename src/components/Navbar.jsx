@@ -108,26 +108,34 @@ export default function Navbar () {
                     <MenuIcon />
                     </IconButton>
                     <Menu
-                    id="menu-appbar"
-                    anchorEl={anchorElNav}
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'left',
-                    }}
-                    keepMounted
-                    transformOrigin={{
-                        vertical: 'top',
-                        horizontal: 'left',
-                    }}
-                    open={Boolean(anchorElNav)}
-                    onClose={handleCloseNavMenu}
-                    sx={{ display: { xs: 'block', md: 'none' } }}
+                        id="menu-appbar"
+                        anchorEl={anchorElNav}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'left',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                        }}
+                        open={Boolean(anchorElNav)}
+                        onClose={handleCloseNavMenu}
+                        sx={{ display: { xs: 'block', md: 'none' } }}
                     >
-                    {pages.map((page) => (
-                        <MenuItem key={page} onClick={handleCloseNavMenu}>
-                        <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
-                        </MenuItem>
-                    ))}
+                        {pages.map((page) => {
+                            let link = `/${page}`;
+                            if (page === 'home') {
+                                link = '/';
+                            }
+                            return (
+                                <Link to={link} style={{ textDecoration: 'none' }}>
+                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                        <Typography sx={{ color:'black', textAlign: 'center' }}>{page}</Typography>
+                                    </MenuItem>
+                                </Link>
+                            )
+                        })}
                     </Menu>
                 </Box>
                 <Typography

@@ -16,7 +16,7 @@ export default function ProjectCard({project}) {
         component="img"
         alt="Project Image"
         image={project.img}
-        sx={{height:'50%'}}
+        sx={{height:'15vw'}}
       />
       <CardContent>
         <Typography variant="h5" component="div">
