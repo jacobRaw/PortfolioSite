@@ -1,18 +1,36 @@
 {
   "files": {
     "main.css": "/PortfolioSite/static/css/main.f855e6bc.css",
-    "main.js": "/PortfolioSite/static/js/main.c71237e0.js",
+    "main.js": "/PortfolioSite/static/js/main.0c88c7b4.js",
     "static/js/453.534db5b8.chunk.js": "/PortfolioSite/static/js/453.534db5b8.chunk.js",
     "static/media/headshot.png": "/PortfolioSite/static/media/headshot.977b561f37b22cf193a9.png",
+    "static/media/vanuatuGardening.png": "/PortfolioSite/static/media/vanuatuGardening.b09af2ced3e9ed586ade.png",
+    "static/media/4wdPantry.jpg": "/PortfolioSite/static/media/4wdPantry.c23416c02a70ef3a61a6.jpg",
+    "static/media/webots_logo.png": "/PortfolioSite/static/media/webots_logo.ae7e852d5195cccf45bd.png",
+    "static/media/SR7.png": "/PortfolioSite/static/media/SR7.25d8003e668a7ee77cd8.png",
+    "static/media/java-logo.png": "/PortfolioSite/static/media/java-logo.65559c7081cb52053b13.png",
+    "static/media/gitlab-logo.jpg": "/PortfolioSite/static/media/gitlab-logo.7e9ff56ac4e59718541e.jpg",
+    "static/media/Typescript_logo.png": "/PortfolioSite/static/media/Typescript_logo.659e4b9351cf1baa6930.png",
     "static/media/unsw.svg": "/PortfolioSite/static/media/unsw.0e825da50e1225ad50ee94d664db7688.svg",
+    "static/media/reactjs-logo.png": "/PortfolioSite/static/media/reactjs-logo.fd373eec9017cf21b26d.png",
+    "static/media/fusion360-logo.png": "/PortfolioSite/static/media/fusion360-logo.dc7b92008283efb26416.png",
+    "static/media/GitHub-logo.png": "/PortfolioSite/static/media/GitHub-logo.7c8f7736007664c4b0ba.png",
+    "static/media/CSS-Logo-2011.png": "/PortfolioSite/static/media/CSS-Logo-2011.3f479584350aaf688826.png",
+    "static/media/visualStudio-logo.png": "/PortfolioSite/static/media/visualStudio-logo.dbe298166a45e2d3575b.png",
+    "static/media/html-logo.png": "/PortfolioSite/static/media/html-logo.9d6471aeed108afe4c0a.png",
+    "static/media/JavaScript-logo.png": "/PortfolioSite/static/media/JavaScript-logo.266bd9fb2663dcc057b4.png",
     "static/media/macquarieUniIcon.svg": "/PortfolioSite/static/media/macquarieUniIcon.46b0ae28f361593f662a48f415025cd3.svg",
+    "static/media/creo-logo.webp": "/PortfolioSite/static/media/creo-logo.5f00fc7770ededa01d27.webp",
+    "static/media/wsl-logo.webp": "/PortfolioSite/static/media/wsl-logo.00c39b256874e50f133c.webp",
+    "static/media/verilog-logo.svg": "/PortfolioSite/static/media/verilog-logo.dcbf845399cea8140a84f58f3f2429b1.svg",
     "index.html": "/PortfolioSite/index.html",
+    "static/media/material-ui-1.svg": "/PortfolioSite/static/media/material-ui-1.fd510ed8518b192069590b04e2e6348a.svg",
     "main.f855e6bc.css.map": "/PortfolioSite/static/css/main.f855e6bc.css.map",
-    "main.c71237e0.js.map": "/PortfolioSite/static/js/main.c71237e0.js.map",
+    "main.0c88c7b4.js.map": "/PortfolioSite/static/js/main.0c88c7b4.js.map",
     "453.534db5b8.chunk.js.map": "/PortfolioSite/static/js/453.534db5b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.c71237e0.js"
+    "static/js/main.0c88c7b4.js"
   ]
 }
