@@ -46,7 +46,7 @@ const eduColor = grey[100];
 const skills = [
     {
         title: 'JavaScript',
-        description: 'Implemented both frontend and backend of websites using JS.',
+        description: 'Implemented both frontend and backend of websites during my studies and extracurricular.',
         img: jsLogo,
         width: '30%',
     },
@@ -278,38 +278,53 @@ const IconDiv = styled('div')({
     height: '70%',
 })
 
+const EducationBox = styled('div')({
+    display: 'flex', 
+    justifyContent: 'space-between', 
+    gap:'1vw', 
+    alignItems: 'center',
+})
+
+const EducationLogo = styled('div')({
+    width: '45%', 
+    position: 'relative', 
+    textAlign: 'center',
+})
+
 const SkillContent = styled('span')({
-    position:'relative',
+    position:'absolute',
     top:'0',
     left:'0',
     width:'100%',
     height:'100%',
-   backgroundColor:'white',
+    backgroundColor:'white',
+    display: 'block',
     transition:'all .3s ease-in-out',
     borderRadius: '10px 0px 10px 0px',
     zIndex: '1',
+    padding: 'auto',
     'button:hover > &': {
         zIndex:'2',
-        transform: 'translateY(83%)',
-        height:'120%',
+        top: '100%',
+        height:'auto',
         boxShadow: '0px 0px 15px 5px grey',
         borderBottomRightRadius: '10px',
         borderTopLeftRadius:'0px',
-        //backgroundColor: 'white',
     }
 })
 
 const SkillLogo = styled('span')({
-    position: 'relative',
+    position: 'absolute',
     left:'0',
     top: '0',
     zIndex:'10',
     transition:'all .3s ease-in-out',
     backgroundColor: 'white',
-    display:'block',
     width:'100%',
     height: '100%',
     borderTopLeftRadius: '10px',
+    display: 'flex',
+    justifyContent: 'center',
 })
 
 const SkillBox = styled('button')({
@@ -328,8 +343,8 @@ const SkillBox = styled('button')({
     backgroundColor: 'white',
     border: 'none',
     transition:'all .3s ease-in-out',
-    position: 'static',
-    height:'100px',
+    position: 'relative',
+    height:'10vh',
     zIndex:'2',
     display:'block',
     overflow:'hidden',
@@ -372,55 +387,58 @@ export default function Home () {
             </ProfileOverlay>
         <ProfilePicture src={profilePicture} alt="Profile picture"/>
         </ProfileContainer>
-        <div style={{backgroundColor: eduColor, paddingTop: '2vw', paddingBottom: '2vw'}}>
-        <Container>
-            <h1 style={{textAlign: 'center', marginBottom: '0.7vw', marginTop: '0'}}>Recent Experience and Projects</h1>
-            <div style={{textAlign: 'center'}}>My most recent professional achievements or you can access all of my projects here.</div>
-            <div style={{marginTop: '3vw', display:'flex', justifyContent:'space-between', flexWrap: 'wrap', gap:'1vw'}}>
-                <ProjectCard 
-                    project={{
-                        name: 'Van Bed Frame', 
-                        img: 'van picture', 
-                        role:'Personal Project', 
-                        description: 'hello',
-                        time: 'Dec 2024',
-                }}/>
-                <ProjectCard 
-                    project={{
-                        name: 'Sunswift', 
-                        img: `${SR7}`, 
-                        role:'Embedded Systems Software Engineer', 
-                        description: 'hello',
-                        time: 'Sep 2023 - Dec 2024',
-                }}/>
-                <ProjectCard 
-                    project={{
-                        name: '4WD Pantry', 
-                        img: `${FWDpantry}`, 
-                        role:'Personal Project', 
-                        description: 'hello',
-                        time: 'Jan 2023 - Dec 2023',
-                }}/>
-                <ProjectCard 
-                    project={{
-                        name: 'EWB Digital Design Summit', 
-                        img: `${vanuatuGardening}`, 
-                        role:'Humanitarian Engineering Consultant', 
-                        description: 'hello',
-                        time: 'Jan 2022 - Feb 2022',
-                }}/>
-                
-            </div>
-            <div style={{textDecoration: 'underline', textAlign: 'center', marginTop:'2vw'}}>View all projects</div>
-        </Container>
+        <div style={{backgroundColor: `${eduColor}`, paddingTop: '2vw', paddingBottom: '2vw'}}>
+            <Container sx={{}}>
+                <h1 style={{textAlign: 'center', marginBottom: '0.7vw', marginTop: '0'}}>Recent Experience and Projects</h1>
+                <div style={{textAlign: 'center'}}>My most recent professional achievements or you can access all of my projects here.</div>
+                <div style={{marginTop: '3vw', display:'flex', justifyContent:'space-between', flexWrap: 'wrap', gap:'1vw'}}>
+                    <ProjectCard 
+                        project={{
+                            name: 'Van Bed Frame', 
+                            img: 'van picture', 
+                            role:'Personal Project', 
+                            description: 'hello',
+                            time: 'Dec 2024',
+                    }}/>
+                    <ProjectCard 
+                        project={{
+                            name: 'Sunswift', 
+                            img: `${SR7}`, 
+                            role:'Embedded Systems Software Engineer', 
+                            description: 'hello',
+                            time: 'Sep 2023 - Dec 2024',
+                    }}/>
+                    <ProjectCard 
+                        project={{
+                            name: '4WD Pantry', 
+                            img: `${FWDpantry}`, 
+                            role:'Personal Project', 
+                            description: 'hello',
+                            time: 'Jan 2023 - Dec 2023',
+                    }}/>
+                    <ProjectCard 
+                        project={{
+                            name: 'EWB Digital Design Summit', 
+                            img: `${vanuatuGardening}`, 
+                            role:'Humanitarian Engineering Consultant', 
+                            description: 'hello',
+                            time: 'Jan 2022 - Feb 2022',
+                    }}/>
+                    
+                </div>
+                <div style={{textDecoration: 'underline', textAlign: 'center', marginTop:'2vw'}}>View all projects</div>
+            </Container>
         </div>
         <div style={{backgroundColor: 'white'}}>
             <Container>
-                <h1>Education</h1>
+                <h1 style={{textAlign: 'center'}}>Education</h1>
                 <div style={{display: 'flex', flexDirection: 'column'}}>
-                    <div style={{display: 'flex'}}>
-                        <img src={unswIcon} alt={'unsw logo'} style={{width: '15%', height: '15%'}}/>
-                            <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
+                    <EducationBox>
+                        <EducationLogo>
+                            <img src={unswIcon} alt={'unsw logo'} style={{width: '50%', height: '100%', objectFit: 'contain'}}/>
+                        </EducationLogo>
+                        <div style={{textAlign: 'center', width: '45%'}}>
+                            <ul style={{listStyleType:'none', textAlign: 'center', lineHeight: '3vh', marginTop:'0px', paddingLeft:'1%', paddingRight:'1%'}}>
                                 <li>
                                     <b>Bachelor of Engineering (Mechatronics) and Computer Science</b>
                                 </li>
@@ -434,10 +452,14 @@ export default function Home () {
                                     WAM: 79.934
                                 </li>
                             </ul>
-                    </div>
-                    <div style={{display: 'flex'}}>
-                        <img src={macUniIcon} alt={'macquarie uni logo'} style={{width: '15%', height: '20%'}}/>
-                            <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px'}}>
+                        </div>
+                    </EducationBox>
+                    <EducationBox>
+                        <EducationLogo>
+                            <img src={macUniIcon} alt={'macquarie uni logo'} style={{width: '50%', height: '100%'}}/>
+                        </EducationLogo>
+                        <div style={{textAlign: 'center', width: '45%'}}>
+                            <ul style={{listStyleType:'none', textAlign: 'center', width:'100%', lineHeight: '3vh', marginTop:'0px', paddingLeft:'1%', paddingRight:'1%'}}>
                                 <li>
                                     <b>Bachelor of Engineering (Mechatronics) and Astrophysics</b>
                                 </li>
@@ -451,14 +473,19 @@ export default function Home () {
                                     WAM: 86.267
                                 </li>
                             </ul>
-                    </div>
+                        </div>
+                    </EducationBox>
                 </div>
             </Container>
-            <Container>
+            <Container sx={{textAlign: 'center', marginBottom: '5vw'}}>
                 <Divider/>
                 <h1>Skills</h1>
-                <div>List of all technical skills such as CAD softwares, programming languages and dev tools. Please click on a skill to learn more about my experience.</div>
-                <div style={{display: 'flex', flexWrap: 'wrap', gap: '2vw'}}>
+                <div style={{marginBottom: '3vw'}}>
+                    List of all technical skills such as CAD softwares, 
+                    programming languages and dev tools. 
+                    Please click on a skill to learn more about my experience.
+                </div>
+                <div style={{display: 'flex', flexWrap: 'wrap', gap:'2vw', justifyContent: 'center'}}>
                 {skills.map((skill) => {
                     let altTag = `${skill.title} logo`;
                     return (
@@ -469,7 +496,7 @@ export default function Home () {
                             
                             <SkillContent>
                                 <h4 style={{marginBottom:'1vw'}}>{skill.title}</h4>
-                                <p>
+                                <p style={{paddingLeft: '2%', paddingRight: '2%'}}>
                                     {skill.description}
                                 </p>
                             </SkillContent>
