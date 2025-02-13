@@ -192,25 +192,23 @@ export default function Navbar () {
                     })}
                 </Box>
                 <Box sx={{ flexGrow: 0 }}>
-                    <Tooltip title="Contact Info">
-                        <IconButton
-                         id="basic-button"
-                         aria-controls={Boolean(emailMenu) ? 'basic-menu' : undefined}
-                         aria-haspopup="true"
-                         aria-expanded={Boolean(emailMenu) ? 'true' : undefined}
-                         onClick={handleEmailOpen}
-                        sx={{color: textColor, '&:hover': {color:`${textHover}`, transition: 'transform 0.15s', transform: 'scale(1.1)', backgroundColor: 'transparent'}}}>
-                            <MailOutlineIcon/>
-                        </IconButton>
-                        <Menu
-                        anchorEl={emailMenu}
-                        open={Boolean(emailMenu)}
-                        onClose={handleEmailClose}
-                        sx={{}}
-                        >
-                            <MenuItem>Email: jacobrawung1@hotmail.com</MenuItem>
-                        </Menu>
-                    </Tooltip>
+                    <IconButton
+                        id="basic-button"
+                        aria-controls={Boolean(emailMenu) ? 'basic-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={Boolean(emailMenu) ? 'true' : undefined}
+                        onClick={handleEmailOpen}
+                    sx={{color: textColor, '&:hover': {color:`${textHover}`, transition: 'transform 0.15s', transform: 'scale(1.1)', backgroundColor: 'transparent'}}}>
+                        <MailOutlineIcon/>
+                    </IconButton>
+                    <Menu
+                    anchorEl={emailMenu}
+                    open={Boolean(emailMenu)}
+                    onClose={handleEmailClose}
+                    sx={{}}
+                    >
+                        <MenuItem>Email: jacobrawung1@hotmail.com</MenuItem>
+                    </Menu>
                     <Tooltip title="Github Profile">
                         <IconButton component="a" target="_blank" href="https://github.com/jacobRaw"  sx={{color: textColor, '&:hover': {color:`${textHover}`,transition: 'transform 0.15s', transform: 'scale(1.1)',  backgroundColor: 'transparent'}}}>
                             <GitHubIcon/>
