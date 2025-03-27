@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/PortfolioSite/static/css/main.f855e6bc.css",
-    "main.js": "/PortfolioSite/static/js/main.0c88c7b4.js",
+    "main.js": "/PortfolioSite/static/js/main.91e5fa54.js",
     "static/js/453.534db5b8.chunk.js": "/PortfolioSite/static/js/453.534db5b8.chunk.js",
     "static/media/headshot.png": "/PortfolioSite/static/media/headshot.977b561f37b22cf193a9.png",
+    "static/media/van.jpg": "/PortfolioSite/static/media/van.2e614e4ccb046f1fe075.jpg",
     "static/media/vanuatuGardening.png": "/PortfolioSite/static/media/vanuatuGardening.b09af2ced3e9ed586ade.png",
     "static/media/4wdPantry.jpg": "/PortfolioSite/static/media/4wdPantry.c23416c02a70ef3a61a6.jpg",
     "static/media/webots_logo.png": "/PortfolioSite/static/media/webots_logo.ae7e852d5195cccf45bd.png",
@@ -26,11 +27,11 @@
     "index.html": "/PortfolioSite/index.html",
     "static/media/material-ui-1.svg": "/PortfolioSite/static/media/material-ui-1.fd510ed8518b192069590b04e2e6348a.svg",
     "main.f855e6bc.css.map": "/PortfolioSite/static/css/main.f855e6bc.css.map",
-    "main.0c88c7b4.js.map": "/PortfolioSite/static/js/main.0c88c7b4.js.map",
+    "main.91e5fa54.js.map": "/PortfolioSite/static/js/main.91e5fa54.js.map",
     "453.534db5b8.chunk.js.map": "/PortfolioSite/static/js/453.534db5b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.0c88c7b4.js"
+    "static/js/main.91e5fa54.js"
   ]
 }
