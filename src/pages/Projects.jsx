@@ -4,7 +4,7 @@ export default function Projects () {
     return (
         <>
         <Navbar/>
-        Project page
+        Welcome to my projects page. This page is still under development.
         </>
     )
 }

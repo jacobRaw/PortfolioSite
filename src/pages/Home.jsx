@@ -10,6 +10,7 @@ import ewbIcon from '../resources/ewb_australia.png';
 import Footer from '../components/Footer.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
 import SR7 from '../resources/SR7.png';
+import van from '../resources/van.jpg';
 import Divider from '@mui/material/Divider';
 import jsLogo from '../resources/JavaScript-logo.png';
 import tsLogo from '../resources/Typescript_logo.png';
@@ -39,6 +40,7 @@ import pythonLogo from '../resources/python-logo.jpg';
 import latexLogo from '../resources/latex-logo.png';
 import FWDpantry from '../resources/4wdPantry.jpg';
 import vanuatuGardening from '../resources/vanuatuGardening.png';
+import { Link } from 'react-router-dom';
 
 const textColor = grey[900];
 const eduColor = grey[100];
@@ -395,7 +397,7 @@ export default function Home () {
                     <ProjectCard 
                         project={{
                             name: 'Van Bed Frame', 
-                            img: 'van picture', 
+                            img: `${van}`, 
                             role:'Personal Project', 
                             description: 'hello',
                             time: 'Dec 2024',
@@ -426,7 +428,22 @@ export default function Home () {
                     }}/>
                     
                 </div>
-                <div style={{textDecoration: 'underline', textAlign: 'center', marginTop:'2vw'}}>View all projects</div>
+                <div
+                style= {{
+                    textAlign: 'center', 
+                        marginTop:'2vw',
+                }}>
+                    <Link 
+                        to={'projects'} 
+                        style={{ 
+                            textDecoration: 'underline', 
+
+                            color: 'black'
+                        }}
+                    >
+                            View all projects
+                    </Link>
+                </div>
             </Container>
         </div>
         <div style={{backgroundColor: 'white'}}>

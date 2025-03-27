@@ -155,7 +155,7 @@ export default function Navbar () {
                     mr: 2,
                     display: { xs: 'flex', md: 'none' },
                     flexGrow: 1,
-                    fontFamily: 'monospace',
+                    fontFamily: 'sans-serif',
                     fontWeight: 700,
                     letterSpacing: '.3rem',
                     textDecoration: 'none',
@@ -198,14 +198,14 @@ export default function Navbar () {
                         aria-haspopup="true"
                         aria-expanded={Boolean(emailMenu) ? 'true' : undefined}
                         onClick={handleEmailOpen}
-                    sx={{color: textColor, '&:hover': {color:`${textHover}`, transition: 'transform 0.15s', transform: 'scale(1.1)', backgroundColor: 'transparent'}}}>
+                        sx={{color: textColor, '&:hover': {color:`${textHover}`, transition: 'transform 0.15s', transform: 'scale(1.1)', backgroundColor: 'transparent'}}}>
                         <MailOutlineIcon/>
                     </IconButton>
                     <Menu
-                    anchorEl={emailMenu}
-                    open={Boolean(emailMenu)}
-                    onClose={handleEmailClose}
-                    sx={{}}
+                        anchorEl={emailMenu}
+                        open={Boolean(emailMenu)}
+                        onClose={handleEmailClose}
+                        sx={{}}
                     >
                         <MenuItem>Email: jacobrawung1@hotmail.com</MenuItem>
                     </Menu>
