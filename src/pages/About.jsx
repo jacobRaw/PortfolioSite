@@ -4,7 +4,7 @@ export default function About () {
     return (
         <>
         <Navbar/>
-            About page
+            Welcome to my About page. This page is still under development.
         </>
     );
 }
